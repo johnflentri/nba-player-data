@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Header from "./components/Header";
 
 function App() {
   return (
@@ -16,7 +17,9 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          <Header titlebadge="NEW TITLE BADGE"
+            middle="MIDDLE SECTION"
+            description="DESCRIPTION" />
         </a>
       </header>
     </div>
