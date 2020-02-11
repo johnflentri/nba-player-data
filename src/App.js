@@ -7,7 +7,7 @@ import Feed from "./components/Feed";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <header class="header">
         <Header titlebadge="NBA PLAYERS" />
       </header>
       <body>
@@ -20,16 +20,3 @@ function App() {
 }
 
 export default App;
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <Feed titlebadge="NBA PLAYERS"
-//           middle="MIDDLE SECTION"
-//           description="DESCRIPTION" />
-//       </header>
-//       <body></body>
-//     </div>
-//   );
-// }

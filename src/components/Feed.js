@@ -1,4 +1,5 @@
 import React from "react";
+import LikeCounter from "./LikeCounter"
 export default class Feed extends React.Component {
   // the initial state
   state = {
@@ -10,8 +11,6 @@ export default class Feed extends React.Component {
     return fetch("https://www.balldontlie.io/api/v1/players")
       .then(res => res.json())
       .then(data => {
-        console.log(data);
-
         this.setState({
           loading: false,
           data
@@ -30,13 +29,12 @@ export default class Feed extends React.Component {
     } else if (this.state.error) {
       return <div>"Error</div>;
     } else {
-      // console.log("yo", this.state.data);
       return (
-        <ul>
+        <div class="feed"><ul>
           {this.state.data.data.map(player => {
-            return <li>{player.first_name + " " + player.last_name}</li>
+            return <li>{player.first_name + " " + player.last_name}<LikeCounter /><br></br></li>
           })}
-        </ul>
+        </ul></div>
       )
     }
   }
