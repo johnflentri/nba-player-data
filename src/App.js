@@ -1,29 +1,35 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Header from "./components/Header";
+import Feed from "./components/Feed";
+
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Header titlebadge="NEW TITLE BADGE"
-            middle="MIDDLE SECTION"
-            description="DESCRIPTION" />
-        </a>
+        <Header titlebadge="NBA PLAYERS" />
       </header>
+      <body>
+        <div>
+          <Feed />
+        </div>
+      </body>
     </div>
   );
 }
 
 export default App;
+
+// function App() {
+//   return (
+//     <div className="App">
+//       <header className="App-header">
+//         <Feed titlebadge="NBA PLAYERS"
+//           middle="MIDDLE SECTION"
+//           description="DESCRIPTION" />
+//       </header>
+//       <body></body>
+//     </div>
+//   );
+// }
