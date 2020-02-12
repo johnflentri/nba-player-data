@@ -1,5 +1,6 @@
 import React from "react";
-import LikeCounter from "./LikeCounter"
+import LikeCounter from "./LikeCounter";
+import AddComment from "./AddComment";
 export default class Feed extends React.Component {
   // the initial state
   state = {
@@ -30,12 +31,22 @@ export default class Feed extends React.Component {
       return <div>"Error</div>;
     } else {
       return (
-        <div class="feed"><ul>
-          {this.state.data.data.map(player => {
-            return <li>{player.first_name + " " + player.last_name}<LikeCounter /><br></br></li>
-          })}
-        </ul></div>
-      )
+        <div class="feed">
+          <ul>
+            {this.state.data.data.map(player => {
+              return (
+                <li>
+                  {player.first_name + " " + player.last_name}
+                  <LikeCounter />
+                  <AddComment />
+                  <br></br>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      );
     }
   }
 }
+// TODO Create AddComment Component. Tag Above should display a comments box for every player
